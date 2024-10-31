@@ -1,0 +1,11 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2.0.12
+_src_path: gh:algorandfoundation/algokit-fullstack-template
+author_email: akinbolawa90@gmail.com
+author_name: lexycole
+cloud_provider: vercel
+contract_name: gaba_drive_smart_contract
+deployment_language: python
+preset_name: production
+project_name: gaba-drive
+

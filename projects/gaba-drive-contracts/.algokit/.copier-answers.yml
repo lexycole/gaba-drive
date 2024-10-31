@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 1.3.4
+_src_path: gh:algorandfoundation/algokit-python-template
+author_email: akinbolawa90@gmail.com
+author_name: lexycole
+contract_name: gaba_drive_smart_contract
+deployment_language: python
+preset_name: production
+project_name: gaba-drive-contracts
+

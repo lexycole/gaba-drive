@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.vscode/**'
+      - '.idea/**'
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  gaba-drive-contracts-validate:
+    name: Run gaba-drive-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/gaba-drive-contracts-ci.yaml
+
+  gaba-drive-contracts-release:
+    name: Run gaba-drive-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/gaba-drive-contracts-cd.yaml
+    needs: gaba-drive-contracts-validate
+
+  gaba-drive-frontend-validate:
+    name: Run gaba-drive-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/gaba-drive-frontend-ci.yaml
+
+  gaba-drive-frontend-release:
+    name: Run gaba-drive-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/gaba-drive-frontend-cd.yaml
+    needs: gaba-drive-frontend-validate
